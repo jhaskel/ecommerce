@@ -12,7 +12,7 @@ class CouponSchema extends Schema {
       table.dateTime('valid_until')
       table.integer('quantity').defaultTo('1')
       table.enu('can_user_for',['product','client','product_client','all'])
-       table.enu('type',['free','currency','percent']).defaultTo('currency')
+      table.enu('type',['free','currency','percent']).defaultTo('currency')
       table.boolean('recursive').defaultTo(false)
       table.timestamps()
 
