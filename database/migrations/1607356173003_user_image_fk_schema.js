@@ -9,7 +9,7 @@ class UserImageFkSchema extends Schema {
       table
         .foreign('image_id')
         .references('id')
-        .inTable('Images')
+        .inTable('images')
         .onDelete('cascade')
     })
   }
