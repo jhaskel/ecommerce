@@ -12,7 +12,7 @@ class OrderSchema extends Schema {
       table.enu('status',['pending','cancelled','shipped','paid','finished'])
       table.timestamps()
 
-      table.foreign('user_id').reference('id').intTable('users').onDelete('cascade')
+      table.foreign('user_id').references('id').intTable('users').onDelete('cascade')
     })
   }
 

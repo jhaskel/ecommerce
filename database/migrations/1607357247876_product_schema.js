@@ -35,8 +35,8 @@ class ProductSchema extends Schema {
     table.integer('product_id').unsigned
     table.integer('category_id').unsigned
 
-    table.foreign('product_id').reference('id').intTable('images').onDelete('cascade')
-    table.foreign('category_id').reference('id').intTable('categories').onDelete('cascade')
+    table.foreign('product_id').references('.')('id').intTable('images').onDelete('cascade')
+    table.foreign('category_id').references('id').intTable('categories').onDelete('cascade')
 
 
 
