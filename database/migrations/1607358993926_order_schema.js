@@ -8,11 +8,11 @@ class OrderSchema extends Schema {
     this.create('orders', (table) => {
       table.increments()
       table.decimal('total',12,2).defaultTo('0.0')
-      table.integer(user_id).unsigned()
+      table.integer('user_id').unsigned()
       table.enu('status',['pending','cancelled','shipped','paid','finished'])
       table.timestamps()
 
-      table.foreign('user_id').references('id').intTable('users').onDelete('cascade')
+      table.foreign('user_id').references('id').inTable('users').onDelete('cascade')
     })
   }
 

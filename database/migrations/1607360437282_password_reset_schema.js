@@ -11,7 +11,7 @@ class PasswordResetSchema extends Schema {
       table.string('token').notNullable().unique()
       table.dateTime('expires_at')
 
-      table.foreing('email').references('email').inTable('users').onDelete('cascade')
+      table.foreign('email').references('email').inTable('users').onDelete('cascade')
 
 
       table.timestamps()

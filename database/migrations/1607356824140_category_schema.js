@@ -9,10 +9,13 @@ class CategorySchema extends Schema {
       table.increments()
       table.string('title',100)
       table.string('description',255),
-      table.image_id('image_id').unsigned()
+      table.integer('image_id').unsigned()
       table.timestamps()
-
-      table.foreign('iamge_id').references('id').intTable('images').onDelete('cascade')
+      table
+        .foreign('image_id')
+        .references('id')
+        .inTable('images')
+        .onDelete('cascade')
     })
   }
 
